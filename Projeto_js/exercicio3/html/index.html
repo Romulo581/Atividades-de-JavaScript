@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styler.css" type="text">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: green;}
+
+    </style>
+</head>
+
+<body>
+    <h1>Exercicio 3 - JS</h1>
+    <p>Vamos mudar a cor de fundo da página</p>
+</body>
+    <script>
+        let mudarCores =['green','red','blue']
+        let mudarCores1 =['black','pink','orange']
+        document.body.style.color = mudarCores1[2]
+        document.body.style.backgroundColor = mudarCores[2]
+        function alterarCores(){
+            document.body.style.backgroundColor = mudarCores[Math.floor(3 * Math.random())]
+
+        }
+        setInterval(alterarCores,3000)
+    </script>
+</html>
