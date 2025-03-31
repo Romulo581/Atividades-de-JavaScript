@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="../css/styler.css">
+</head>
+<body>
+    <header>
+        <div class="button_menu">
+            <button class="menu">Home</button>
+            <button class="menu">Produtos</button>
+            <button class="menu">Contatos</button>
+            <button class="menu">Carrinho</button>
+        </div>
+    </header>
+    <div class="box">
+        <div class="dropdown">
+            <h3>Selecione a forma de pagamento:</h3>
+            <select name="opcao" id="opcao" onchange="mostrarPagamento()">
+                <option value="">Selecione...</option>
+                <option value="pix">Pix</option>
+                <option value="credito">Crédito</option>
+                <option value="debito">Débito</option>
+            </select>
+            <!-- Botão Pagar com type="button" para evitar envio de formulário -->
+            <button type="button" onclick="mostrarAlerta()">Pagar</button>
+        </div>
+    </div>
+
+    <!-- QR Code (aparece se escolher Pix) -->
+    <div id="qrcode" style="display:none;">
+        <h4>QR Code para pagamento com Pix:</h4>
+        <img src="https://via.placeholder.com/150x150.png?text=QR+Code" alt="QR Code" />
+    </div>
+
+    <!-- Formulário de Cartão (aparece se escolher Crédito ou Débito) -->
+    <div id="cartao-form" style="display:none;">
+        <h4>Preencha os dados do cartão:</h4>
+        <form>
+            <input type="text" placeholder="Número do Cartão" required><br>
+            <input type="number" placeholder="Mês de Validade" required><br>
+            <input type="number" placeholder="Ano de Validade" required><br>
+            <input type="number" placeholder="CVV" required><br>
+        </form>
+    </div>
+ <script src="../javaScript/script.js"></script>
+</body>
+</html>
